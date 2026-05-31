@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "T-Drive",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/expo.icon/Assets/pwa-icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a75c266c-ecfa-4007-9f38-b61305eececd",
+      "enabled": false
+    },
+    "ios": {
+      "icon": "./assets/expo.icon/Assets/pwa-icon.png",
+      "bundleIdentifier": "com.imteaj12.tdrive",
+      "supportsTabletMode": true,
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.imteaj12.tdrive"
+        ]
+      }
+    },
+    "android": {
+      "icon": "./assets/expo.icon/Assets/pwa-icon.png",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.imteaj12.tdrive",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO"
+      ],
+      "usesCleartextTraffic": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/expo.icon/Assets/pwa-icon.png",
+      "bundler": "metro"
+    },
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#208AEF"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "android": {
+            "image": "./assets/images/splash-icon.png",
+            "imageWidth": 76,
+            "resizeMode": "contain"
+          },
+          "ios": {
+            "tabletImage": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      "expo-video",
+      "@config-plugins/react-native-blob-util",
+      "@config-plugins/react-native-pdf"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a75c266c-ecfa-4007-9f38-b61305eececd"
+      }
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "src/**/*",
+      "assets/**/*"
+    ]
+  }
+}
